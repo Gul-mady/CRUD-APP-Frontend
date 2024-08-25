@@ -10,7 +10,7 @@ const FormComponent = ({ onSuccess }) => {
 
     // Post the form data to your backend API
     try {
-      const response = await axios.post('http://localhost:5000/student/addStudent', { name, age });
+      const response = await axios.post('https://crud-app-backend-puce.vercel.app/student/addStudent', { name, age });
       console.log('Data submitted successfully:', response.data);
 
       // Clear the form after submission

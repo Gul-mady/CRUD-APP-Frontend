@@ -23,17 +23,19 @@ const EditFormComponent = ({ user, onSuccess, onCancel }) => {
             age,
         };
 
+        // Use the provided backend URL
+        const apiUrl = 'https://crud-app-backend-puce.vercel.app';
+
         // Send the PUT request to update the user
-        axios.put(`http://localhost:5000/student/updateStudent/${user.id}`, updatedUser)
+        axios.put(`${apiUrl}/student/updateStudent/${user.id}`, updatedUser)
             .then(response => {
                 console.log('User updated successfully:', response.data);
                 onSuccess();
-                  // Notify parent component that the update was successful
+                // Notify parent component that the update was successful
             })
             .catch(error => {
                 console.error('Error updating user:', error);
             });
-            
     };
 
     return (
