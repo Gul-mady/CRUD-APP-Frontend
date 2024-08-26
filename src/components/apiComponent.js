@@ -6,7 +6,7 @@ const apiComponent = () => {
   const [error, setError] = useState(null);
 
   // Directly use your API URL
-  const apiUrl = 'https://crud-app-backend-puce.vercel.app/'; 
+  const apiUrl = 'https://crud-backend-two-gamma.vercel.app/'; 
 
   useEffect(() => {
     const fetchData = async () => {

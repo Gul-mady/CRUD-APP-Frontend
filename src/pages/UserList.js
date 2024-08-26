@@ -15,7 +15,7 @@ const UserList = () => {
   // Fetch users from the API
   const fetchUsers = async () => {
     try {
-      const response = await axios.get('https://crud-app-backend-puce.vercel.app/student/getStudent');
+      const response = await axios.get('https://crud-backend-two-gamma.vercel.app/student/getStudent');
       const transformedUsers = response.data.map(user => ({
         id: user._id, // Transform _id to id
         name: user.name,
@@ -32,7 +32,7 @@ const UserList = () => {
   const handleUpdate = async (updatedData) => {
     try {
       const { id } = editingUser;
-      await axios.put(`https://crud-app-backend-puce.vercel.app/student/updateStudent/${id}`, updatedData);
+      await axios.put(`https://crud-backend-two-gamma.vercel.app/student/updateStudent/${id}`, updatedData);
       setUsers(prevUsers =>
         prevUsers.map(user =>
           user.id === id ? { ...user, ...updatedData } : user
@@ -48,7 +48,7 @@ const UserList = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://crud-app-backend-puce.vercel.app/student/removeStudent/${id}`);
+      await axios.delete(`https://crud-backend-two-gamma.vercel.app/student/removeStudent/${id}`);
       setUsers(prevUsers =>
         prevUsers.filter(user => user.id !== id)
       );
