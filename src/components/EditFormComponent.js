@@ -24,10 +24,10 @@ const EditFormComponent = ({ user, onSuccess, onCancel }) => {
         };
 
         // Use the provided backend URL
-        const apiUrl = 'https://crud-backend-two-gamma.vercel.app/';
+        // const apiUrl = 'https://crud-backend-two-gamma.vercel.app/';
 
         // Send the PUT request to update the user
-        axios.put(`${apiUrl}/student/updateStudent/${user.id}`, updatedUser)
+        axios.put(`https://crud-backend-two-gamma.vercel.app/student/updateStudent/${user.id}`, updatedUser)
             .then(response => {
                 console.log('User updated successfully:', response.data);
                 onSuccess();
