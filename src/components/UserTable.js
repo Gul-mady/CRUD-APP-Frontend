@@ -19,7 +19,7 @@ const UserTable = ({ users, handleEdit, handleDelete, handleCreateNew }) => {
 
   return (
     <div className="max-w-4xl mx-auto py-6">
-      <h1 className="text-2xl font-bold mb-4">Simple CRUD App</h1>
+      <h1 className="text-2xl font-bold mb-4">CRUD APP</h1>
       <button
         className="bg-green-500 text-white py-2 px-4 rounded mb-4"
         onClick={toggleForm}
